@@ -26,18 +26,20 @@ function App() {
         <div className="app-weather">
           <div className="app-weather__grid">
             <div className="app-weather__card">
-              {weatherData.map((day) => (
-                <div className="app-weather__content" key={day.key}>
-                  <div className="app-weather__wrapper">
-                    <p className="app-weather__sol">{day.sol} SOL</p>
-                    <p className="app-weather__date">{day.date}</p>
+              <div className="app-weather__content">
+                {weatherData.map((day) => (
+                  <div key={day.id}>
+                    <div className="app-weather__wrapper">
+                      <p className="app-weather__sol">{day.sol} SOL</p>
+                      <p className="app-weather__date">{day.date}</p>
+                    </div>
+                    <p className="app-weather__high">High: {day.maxTemp}°F</p>
+                    <p className="app-weather__low">Low: {day.minTemp}°F</p>
+                    <p className="app-weather__sunrise">Sunrise: {day.sunrise}</p>
+                    <p className="app-weather__sunset">Sunset: {day.sunset}</p>
                   </div>
-                  <p className="app-weather__high">High: {day.maxTemp}°F</p>
-                  <p className="app-weather__low">Low: {day.minTemp}°F</p>
-                  <p className="app-weather__sunrise">Sunrise: {day.sunrise}</p>
-                  <p className="app-weather__sunset">Sunset: {day.sunset}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
