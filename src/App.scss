@@ -8,7 +8,6 @@
     center center/ cover no-repeat;
   width: 100%;
   height: 800px;
-
   display: flex;
   flex-direction: column;
 
@@ -19,7 +18,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.407);
     z-index: 1;
   }
 
@@ -27,12 +26,19 @@
     color: #fff;
     z-index: 2;
     font-family: "Trispace";
+    padding-top: 5%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   &__subtitle {
     color: #fff;
     z-index: 2;
     font-family: "Trispace";
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .app-weather {
@@ -52,35 +58,30 @@
       margin: 0% auto;
       position: relative;
       z-index: 3;
+      font-family: "Trispace";
+      padding-left: 15%;
     }
 
-    &__content {
-      z-index: 3;
+    .app-weather__wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-family: "Trispace";
+      text-align: center;
+      width: 80%;
 
-      .app-weather__wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
+      .app-weather__sol {
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.3rem;
+      }
+
+      .app-weather__date {
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding-bottom: 10%;
         border-bottom: 2px solid #ffffffb7;
-
-        .app-weather__sol {
-          color: #fff;
-          font-weight: 600;
-          font-size: 1.3rem;
-        }
-
-        .app-weather__date {
-          color: #fff;
-          font-weight: 600;
-          font-size: 1.2rem;
-        }
       }
 
       .app-weather__high {
@@ -98,6 +99,24 @@
       .app-weather__sunset {
         color: #fff;
       }
+    }
+  }
+
+  .credits {
+    font-family: "Trispace";
+    color: #fff;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.444);
+    width: fit-content;
+
+    &__link {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &__link1 {
+      text-decoration: none;
+      color: #fff;
     }
   }
 }
